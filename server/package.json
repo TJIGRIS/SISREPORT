@@ -1,0 +1,32 @@
+{
+  "name": "backend-sisreport",
+  "version": "1.0.0",
+  "description": "Backend de SisReport hecho en Node.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanMQuijano/SisReport.JS.git"
+  },
+  "author": "Juan Quijano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanMQuijano/SisReport.JS/issues"
+  },
+  "homepage": "https://github.com/JuanMQuijano/SisReport.JS#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
