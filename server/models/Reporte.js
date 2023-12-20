@@ -21,7 +21,7 @@ const reporteSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    descripcion: {
+    description: {
       type: String,
       required: true,
       trim: true,

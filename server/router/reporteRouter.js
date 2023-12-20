@@ -10,7 +10,8 @@ import checkAuth from '../middleware/checkAuth.js'
 
 const router = express.Router()
 
-router.route('/').get(checkAuth, obtenerReportes).post(realizarReporte)
+// router.route('/').get(checkAuth, obtenerReportes).post(realizarReporte)
+router.route('/').get(obtenerReportes).post(realizarReporte)
 router.route('/:ccEst').get(obtenerReporte)
 router.put('/:id', checkAuth, actualizarEstadoReporte)
 router.delete('/:id', checkAuth, deleteReporte)
