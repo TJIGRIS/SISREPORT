@@ -4,86 +4,27 @@ import ImageSearch from "@assets/image/searchReport.svg";
 
 import Layout from "@layouts/Layout.astro";
 import FormSearch from "@components/FormSearch";
+import Table from "@components/Table";
 ---
 
 <Layout title="Buscar Reportes">
   <div
     class="bg-secondary relative rounded-lg flex items-center gap-4 flex-col h-full"
   >
-    <section
-      class="w-full max-w-4xl lg:w-full text-gray-400 px-2 z-10 pt-4 md:pt-10"
-    >
-      <h1 class="text-4xl font-bold text-white mb-4 text-center">
+    <section class="w-full max-w-4xl text-gray-400 px-2 z-10 pt-4 lg:pt-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
         Buscar Reportes
       </h1>
       <FormSearch client:load />
     </section>
 
-    <section class="max-w-4xl z-10 w-full px-2">
-      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table
-          class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
-        >
-          <thead
-            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
-          >
-            <tr>
-              <th scope="col" class="px-6 py-3"> Product name</th>
-              <th scope="col" class="px-6 py-3"> Color</th>
-              <th scope="col" class="px-6 py-3"> Category</th>
-              <th scope="col" class="px-6 py-3"> Price</th>
-              <th scope="col" class="px-6 py-3"> Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
-            >
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                Apple MacBook Pro 17"
-              </th>
-              <td class="px-6 py-4"> Silver</td>
-              <td class="px-6 py-4"> Laptop</td>
-              <td class="px-6 py-4"> $2999</td>
-              <td class="px-6 py-4">
-                <a
-                  href="#"
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >Edit</a
-                >
-              </td>
-            </tr>
-            <tr
-              class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
-            >
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                Microsoft Surface Pro
-              </th>
-              <td class="px-6 py-4"> White</td>
-              <td class="px-6 py-4"> Laptop PC</td>
-              <td class="px-6 py-4"> $1999</td>
-              <td class="px-6 py-4">
-                <a
-                  href="#"
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >Edit</a
-                >
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <section class="max-w-4xl w-full z-10 px-2">
+      <Table client:load />
     </section>
 
     <section class="place-items-center w-full h-full grid absolute opacity-30">
       <Image
-        class="w-2/3 md:w-2/5"
+        class="w-2/3 md:w-2/5 select-none"
         src={ImageSearch}
         alt="Imagen de realizar reporte"
       />

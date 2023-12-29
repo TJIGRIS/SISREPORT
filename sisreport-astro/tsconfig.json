@@ -12,36 +12,15 @@
       "@pages/*": [
         "src/pages/*"
       ],
-      "@styles/*": [
-        "src/styles/*"
-      ],
-      "@utils/*": [
-        "src/utils/*"
-      ],
-      "@types/*": [
-        "src/types/*"
-      ],
       "@assets/*": [
         "src/assets/*"
-      ],
-      "@data/*": [
-        "src/data/*"
-      ],
-      "@config/*": [
-        "src/config/*"
-      ],
-      "@hooks/*": [
-        "src/hooks/*"
-      ],
-      "@services/*": [
-        "src/services/*"
       ],
       "@store/*": [
         "src/store/*"
       ],
-      "@lib/*": [
-        "src/lib/*"
-      ]
+      "@api/*": [
+        "src/api/*"
+      ],
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
