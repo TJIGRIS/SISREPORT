@@ -4,14 +4,15 @@ import { Toaster, toast } from 'sonner'
 
 
 export default function FormLogin() {
-  const isAuthenticated = false
+  const signup = async (data) => {
+    const res = await loginApi(data)
 
-  if (isAuthenticated) return <Navigate to='/dashboard' replace />
-
-  function signup(data) {
-    loginApi(data)
-
-    toast.success('Sesión iniciada')
+    if (res.statusText) {
+      toast.success('Sesión iniciada')
+      setTimeout(() => {
+        window.location.href = '/dashboard'
+      }, [2000])
+    }
   }
 
   const {
