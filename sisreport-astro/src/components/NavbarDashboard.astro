@@ -1,5 +1,7 @@
 ---
 import { Image } from "astro:assets";
+import { Toaster } from "sonner";
+
 import logo from "../../public/logo.png";
 ---
 
@@ -12,8 +14,8 @@ import logo from "../../public/logo.png";
     </a>
 
     <div class="flex items-center md:order-2 space-x-3 md:space-x-0">
-      <a href="/login" class="font-semibold hover:text-primary"
-        >Cerrar Sesión</a
+      <button id="singup" class="font-semibold hover:text-primary"
+        >Cerrar Sesión</button
       >
 
       <button
@@ -48,3 +50,23 @@ import logo from "../../public/logo.png";
     </div>
   </div>
 </nav>
+
+<Toaster richColors client:load />
+
+<script>
+  import { toast } from "sonner";
+  import { logoutApi } from "@api/auth.api";
+
+  const handleSingUp = async () => {
+    try {
+      logoutApi();
+      toast.success("Sesión cerrada");
+    } catch (error) {
+      toast.error("Error");
+    }
+  };
+
+  document.getElementById("singup").addEventListener("click", () => {
+    handleSingUp();
+  });
+</script>
