@@ -20,3 +20,11 @@ import FormLogin from "@components/FormLogin";
     </section>
   </div>
 </Layout>
+
+<script>
+  const cook = document.cookie.split("=")[1];
+
+  if (cook) {
+    window.location.pathname = "/dashboard";
+  }
+</script>
